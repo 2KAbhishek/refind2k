@@ -1,26 +1,25 @@
 # Refind-Dark
+
 A minimalist dark theme for rEFInd.
 
 ![Refind-Dark](https://i.imgur.com/Czhbdot.png)
 
-### Installation:
+## Installation
 
-1. Clone git repository to your $HOME directory.
-   ```
-   git clone https://github.com/2kabhishek/Refind-Dark.git
-   ```
+1.Clone git repository to any directory.
 
-2. Locate refind directory under EFI partition. For most Linux based system is commonly `/boot/efi/EFI/refind/`. Copy theme directory to it. You can change `bg.png` to change the background.
+```bash
+git clone https://github.com/2kabhishek/Refind-Dark.git
+```
 
-   ```
-   sudo cp -r Refind-Dark/refind-dark /boot/efi/EFI/refind/refind-dark
-   ```
+2.You should change `icons/bg.png` to suit your needs.
 
-3. To enable the theme add `include refind-dark/refind-dark.conf` at the end of `refind.conf`.
-   ```
-   sudo nano /boot/efi/EFI/refind/refind.conf
-   ```
+3.Run `setup.sh`.
 
-**More information**
+```bash
+bash -c setup.sh
+```
+
+### More information
 
 [rEFInd](http://www.rodsbooks.com/refind/) Official rEFInd website
