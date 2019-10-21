@@ -1,7 +1,7 @@
-echo "\u001b[32;1mSetting up Refind-Dark..."
-echo "\u001b[31;1mWarning! Admin password is required."
-sudo mkdir /boot/efi/EFI/refind/Refind-Dark
-sudo cp -ivr icons /boot/efi/EFI/refind/Refind-Dark/icons
-sudo cp -iv Refind-Dark.conf /boot/efi/EFI/refind/Refind-Dark/Refind-Dark.conf
-sudo echo include Refind-Dark/Refind-Dark.conf >> /boot/efi/EFI/refind/refind.conf
-echo "\u001b[34;1mDone."
+echo -e "\u001b[32;1mSetting up refind-dark...\u001b[0m"
+echo -e "\u001b[31;1mWarning! Admin password is required.\u001b[0m"
+sudo mkdir -p /boot/efi/EFI/refind/refind-dark
+echo "include refind-dark/refind-dark.conf" | sudo tee /boot/efi/EFI/refind/refind.conf
+sudo cp -r icons /boot/efi/EFI/refind/refind-dark/
+sudo cp -iv refind-dark.conf /boot/efi/EFI/refind/refind-dark/refind-dark.conf
+echo -e "\u001b[34;1mDone.\u001b[0m"
