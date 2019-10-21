@@ -2,7 +2,7 @@
 
 A minimalist dark theme for rEFInd.
 
-![Refind-Dark](https://i.imgur.com/Czhbdot.png)
+![refind-dark](https://i.imgur.com/J94Di2K.png)
 
 ## Installation
 
