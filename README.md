@@ -1,5 +1,3 @@
-<div align="center">
-
 # refind-dark
 
 ![Size](https://img.shields.io/github/repo-size/2kabhishek/refind-dark?style=plastic&color=0f0&label=Size)
@@ -13,7 +11,6 @@
 A minimalist dark theme for rEFInd.
 ![refind-dark](https://i.imgur.com/J94Di2K.png)
 
-</div>
 
 ## Installation
 
@@ -24,7 +21,6 @@ bash setup.sh
 
 You can change `icons/bg.png` to suit your needs.
 
-Please consider hitting the ⭐ star button if this repo was useful to you, any contributions and suggestions are welcome.
 
 ### More information
 
