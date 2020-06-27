@@ -7,6 +7,7 @@
 ![Watchers](https://img.shields.io/github/watchers/2kabhishek/refind-dark?style=plastic&color=ff5500&label=Watchers)
 ![Contributors](https://img.shields.io/github/contributors/2kabhishek/refind-dark?style=plastic&color=f0f&label=Contributors)
 ![License](https://img.shields.io/github/license/2kabhishek/refind-dark?style=plastic&color=555&label=License)
+
 ![refind-dark](https://i.imgur.com/J94Di2K.png)
 
 A minimalist dark theme for rEFInd.
