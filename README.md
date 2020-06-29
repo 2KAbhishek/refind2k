@@ -12,7 +12,6 @@
 
 A minimalist dark theme for rEFInd.
 
-
 ## Installation
 
 ```bash
@@ -22,8 +21,6 @@ bash setup.sh
 
 You can change `icons/bg.png` to suit your needs.
 
-
 ### More information
 
 [rEFInd](http://www.rodsbooks.com/refind/) Official rEFInd website
-
