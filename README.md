@@ -16,6 +16,7 @@ A minimalist dark theme for rEFInd.
 
 ```bash
 git clone https://github.com/2kabhishek/refind-dark.git
+cd refind-dark
 ./setup.sh
 ```
 
