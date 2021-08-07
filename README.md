@@ -16,10 +16,10 @@ A minimalist dark theme for rEFInd.
 
 ```bash
 git clone https://github.com/2kabhishek/refind-dark.git
-bash setup.sh
+./setup.sh
 ```
 
-You can change `icons/bg.png` to suit your needs.
+You can change `banners/bg.png` and `resolution` to suit your needs.
 
 ### More information
 
