@@ -1,11 +1,11 @@
 #!/bin/bash
 
 function setup_refind {
-sudo mkdir -p /boot/efi/EFI/refind/refind-dark
-echo "include refind-dark/refind-dark.conf" | sudo tee /boot/efi/EFI/refind/refind.conf
-sudo cp -r bg /boot/efi/EFI/refind/refind-dark/
-sudo cp -r icons /boot/efi/EFI/refind/refind-dark/
-sudo cp -iv refind-dark.conf /boot/efi/EFI/refind/refind-dark/refind-dark.conf
+    sudo mkdir -p /boot/efi/EFI/refind/refind-dark
+    echo "include refind-dark/refind-dark.conf" | sudo tee /boot/efi/EFI/refind/refind.conf
+    sudo cp -r banners/ /boot/efi/EFI/refind/refind-dark/
+    sudo cp -r icons/ /boot/efi/EFI/refind/refind-dark/
+    sudo cp -iv refind-dark.conf /boot/efi/EFI/refind/refind-dark/refind-dark.conf
 }
 
 echo -e "\u001b[32;1mSetting up refind-dark...\u001b[0m"
