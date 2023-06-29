@@ -39,7 +39,7 @@ Just wanted a pretty but powerful bootloader.
 
 A minimalist dark theme for [rEFInd](http://www.rodsbooks.com/refind/), the ultimate bootloader for hobbyists and multi-booters.
 
-Comes with a clean design with colorful icons and a quick setup script.
+Comes with a clean design with colorful icons, and a quick setup script.
 
 ## Prerequisites
 
@@ -53,6 +53,8 @@ Before you begin, ensure you have met the following requirements:
 git clone https://github.com/2kabhishek/refind-dark.git
 cd refind-dark
 ./setup.sh
+# To uninstall refind-dark run setup.sh with -u or --uninstall
+./setup.sh -u
 ```
 
 ## Customizations
