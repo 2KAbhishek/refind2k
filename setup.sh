@@ -2,17 +2,17 @@
 
 function setup_refind {
     sudo cp /boot/efi/EFI/refind/refind.conf /boot/efi/EFI/refind/refind.conf.bak
-    echo "include refind-dark/refind-dark.conf" | sudo tee /boot/efi/EFI/refind/refind.conf
-    sudo mkdir -p /boot/efi/EFI/refind/refind-dark
-    sudo cp -r banners/ icons/ refind-dark.conf /boot/efi/EFI/refind/refind-dark/
+    echo "include refind2k/refind2k.conf" | sudo tee /boot/efi/EFI/refind/refind.conf
+    sudo mkdir -p /boot/efi/EFI/refind/refind2k
+    sudo cp -r banners/ icons/ refind2k.conf /boot/efi/EFI/refind/refind2k/
 }
 
 function uninstall_refind {
     sudo cp /boot/efi/EFI/refind/refind.conf.bak /boot/efi/EFI/refind/refind.conf
-    sudo rm -rf /boot/efi/EFI/refind/refind-dark
+    sudo rm -rf /boot/efi/EFI/refind/refind2k
 }
 
-echo -e "\u001b[32;1mWelocme to refind-dark...\u001b[0m"
+echo -e "\u001b[32;1mWelocme to refind2k...\u001b[0m"
 echo -e "\u001b[31;1mWarning! sudo password is required.\u001b[0m"
 
 if [ "$1" == "-u" ] || [ "$1" == "--uninstall" ]; then
