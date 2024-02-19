@@ -55,6 +55,9 @@ cd refind2k
 ./setup.sh
 # To uninstall refind2k run setup.sh with -u or --uninstall
 ./setup.sh -u
+# To use a custom ESP, set the ESP envvar
+ESP=/path/to/efi ./setup.sh
+ESP=/path/to/efi ./setup.sh -u
 ```
 
 ## Customizations
