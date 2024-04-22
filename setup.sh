@@ -21,7 +21,7 @@ fi
 
 function setup_refind {
     sudo cp "$ESP/EFI/refind/refind.conf" "$ESP/EFI/refind/refind.conf.bak"
-    echo "include refind2k/refind2k.conf" | sudo tee "$ESP/EFI/refind/refind.conf"
+    echo "include refind2k/refind2k.conf" | sudo tee -a "$ESP/EFI/refind/refind.conf"
     sudo mkdir -p "$ESP/EFI/refind/refind2k"
     sudo cp -r banners/ icons/ refind2k.conf "$ESP/EFI/refind/refind2k/"
 }
