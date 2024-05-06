@@ -21,7 +21,7 @@
 <a href="https://github.com/2KAbhishek/refind2k/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/2kabhishek/refind2k?style=flat&color=e06c75&label="> </a>
 
-<h3>A minimalist dark theme for rEFInd 💠💻</h3>
+<h3>Minimalist Theme for rEFInd 💠💻</h3>
 
 <figure>
   <img src= "https://raw.githubusercontent.com/2KAbhishek/refind2k/main/images/refind2k.jpg" alt="refind2k screenshot" style="width:100%">
