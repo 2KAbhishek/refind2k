@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "\u001b[32;1mWelcome to refind2k...\u001b[0m"
 echo -e "\u001b[31;1mWarning! sudo password is required.\u001b[0m"
