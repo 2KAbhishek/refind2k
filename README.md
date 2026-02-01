@@ -24,7 +24,7 @@
 <h3>Minimalist Theme for rEFInd 💠💻</h3>
 
 <figure>
-  <img src= "https://raw.githubusercontent.com/2KAbhishek/refind2k/main/images/refind2k.jpg" alt="refind2k screenshot" style="width:100%">
+  <img src= "https://raw.githubusercontent.com/2KAbhishek/refind2k/main/images/refind-dark.jpg" alt="refind2k screenshot" style="width:100%">
   <br/>
   <figcaption>refind2k Screenshot</figcaption>
 </figure>
@@ -66,7 +66,7 @@ You can change the banners, icons, resolution etc. in the `refind2k.conf` file t
 
 Here's a screenshot with the default background.
 
-![refind2k-light](https://raw.githubusercontent.com/2KAbhishek/refind2k/main/images/refind2k-light.jpg)
+![refind2k-light](https://raw.githubusercontent.com/2KAbhishek/refind2k/main/images/refind-light.jpg)
 
 
 Hit the ⭐ button if you found this useful.
