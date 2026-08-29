@@ -1,10 +1,21 @@
 #!/usr/bin/env bash
+set -e
+
+current_dir="${BASH_SOURCE[0]%/*}"
+[[ "$current_dir" == "${BASH_SOURCE[0]}" || "$current_dir" == "." ]] && current_dir="$PWD"
+readonly current_dir
+
+cmd_sudo() {
+    if [[ "$EUID" -ne 0 ]] && command -v sudo &>/dev/null; then
+        sudo "$@"
+    else
+        "$@"
+    fi
+}
 
 echo -e "\u001b[32;1mWelcome to refind2k...\u001b[0m"
-echo -e "\u001b[31;1mWarning! sudo password is required.\u001b[0m"
 
 # Detect ESP location, unless user override provided
-# NOTE: does not check actual partitions, as someone may have >1 ESP
 if [ -z "$ESP" ]; then
     if [ -d "/boot/efi/EFI" ]; then
         ESP="/boot/efi"
@@ -19,16 +30,30 @@ if [ -z "$ESP" ]; then
     fi
 fi
 
-function setup_refind {
-    sudo cp "$ESP/EFI/refind/refind.conf" "$ESP/EFI/refind/refind.conf.bak"
-    echo "include refind2k/refind2k.conf" | sudo tee -a "$ESP/EFI/refind/refind.conf"
-    sudo mkdir -p "$ESP/EFI/refind/refind2k"
-    sudo cp -r banners/ icons/ refind2k.conf "$ESP/EFI/refind/refind2k/"
+setup_refind() {
+    if [ ! -d "$ESP/EFI/refind" ]; then
+        echo -e "\u001b[33;1mwarn: $ESP/EFI/refind directory not found. Please install rEFInd first.\u001b[0m"
+        return 0
+    fi
+
+    if [ -f "$ESP/EFI/refind/refind.conf" ]; then
+        if [ ! -f "$ESP/EFI/refind/refind.conf.bak" ]; then
+            cmd_sudo cp "$ESP/EFI/refind/refind.conf" "$ESP/EFI/refind/refind.conf.bak"
+        fi
+        if ! grep -Fq "include refind2k/refind2k.conf" "$ESP/EFI/refind/refind.conf" 2>/dev/null; then
+            echo "include refind2k/refind2k.conf" | cmd_sudo tee -a "$ESP/EFI/refind/refind.conf" >/dev/null
+        fi
+    fi
+
+    cmd_sudo mkdir -p "$ESP/EFI/refind/refind2k"
+    cmd_sudo cp -r "$current_dir/banners" "$current_dir/icons" "$current_dir/refind2k.conf" "$ESP/EFI/refind/refind2k/"
 }
 
-function uninstall_refind {
-    sudo cp "$ESP/EFI/refind/refind.conf.bak" "$ESP/EFI/refind/refind.conf"
-    sudo rm -rf "$ESP/EFI/refind/refind2k"
+uninstall_refind() {
+    if [ -f "$ESP/EFI/refind/refind.conf.bak" ]; then
+        cmd_sudo cp "$ESP/EFI/refind/refind.conf.bak" "$ESP/EFI/refind/refind.conf"
+    fi
+    cmd_sudo rm -rf "$ESP/EFI/refind/refind2k"
 }
 
 if [ "$1" == "-u" ] || [ "$1" == "--uninstall" ]; then
